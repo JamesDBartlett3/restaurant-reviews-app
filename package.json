@@ -1,0 +1,40 @@
+{
+  "name": "restaurant-reviews-app",
+  "version": "1.0.0",
+  "description": "--- #### _Three Stage Course Material Project - Restaurant Reviews_",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sign2": "^0.7.0",
+    "browsersync": "^0.0.1-security",
+    "define-property": "^0.2.5",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-javascript-obfuscator": "^1.1.4",
+    "extend-shallow": "^2.0.1",
+    "form-data": "^2.3.2",
+    "har-validator": "^5.0.3",
+    "gulp-watcher": "^1.0.1",
+    "http-signature": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "is-descriptor": "^1.0.2",
+    "kind-of": "^3.2.2",
+    "qs": "^6.5.2",
+    "performance-now": "^2.1.0",
+    "through2": "^0.6.5",
+    "vinyl": "^0.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesDBartlett/restaurant-reviews-app.git"
+  },
+  "author": "James D. Bartlett III",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesDBartlett/restaurant-reviews-app/issues"
+  },
+  "homepage": "https://github.com/JamesDBartlett/restaurant-reviews-app#readme"
+}
