@@ -3,4 +3,4 @@
 node_modules/
 mapbox_api_key.js
 private/
-*.mkv
+docs/
