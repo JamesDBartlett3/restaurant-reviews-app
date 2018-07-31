@@ -1,11 +1,11 @@
 var staticCache = "rest-rev-v0.0";
-/*
+
 let restCSS = [
-    'css/styles.css'
+    '/css/styles.css'
 ]
 
 let restDATA = [
-    'data/restaurants.json'
+    '/data/restaurants.json'
 ]
 
 let restHTML = [
@@ -15,16 +15,16 @@ let restHTML = [
 ]
 
 let restIMG = [
-    'img/1.jpg', 'img/10.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg',
-    'img/5.jpg', 'img/6.jpg', 'img/7.jpg', 'img/8.jpg', 'img/9.jpg'
+    '/img/1.jpg', '/img/10.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg',
+    '/img/5.jpg', '/img/6.jpg', '/img/7.jpg', '/img/8.jpg', '/img/9.jpg'
 ];
 
 let restJS = [
-    'js/dbhelper.js',
-    'private/mapbox_api_key.js',
-    'js/main.js',
-    'js/register-sw.js',
-    'js/restaurant_info.js'
+    '/js/dbhelper.js',
+    '/private/mapbox_api_key.js',
+    '/js/main.js',
+    '/js/register-sw.js',
+    '/js/restaurant_info.js'
 ];
 
 
@@ -39,20 +39,37 @@ self.addEventListener('install', e => {
             cache.addAll(restIMG);
             cache.addAll(restJS);
         })
+        .catch(error => {
+            console.log('Failed to open one or more caches. Error message: ', error);
+        })
     )
 });
- */
+
 
 self.addEventListener('fetch', e => {
-    if (e.request.method == 'GET') {
-        e.respondWith(caches.open(staticCache).then(cache => {
-            return fetch(e.request).then(req => {
-                const reqClone = req.clone();
-                cache.put(e.request, reqClone)
-                .then(() => {});
-                return req;
-
-            })
-        }))
+    if (e.request.url.hostname !== 'localhost') {
+        e.request.mode = 'no-cors';
     }
+
+    e.respondWith(caches.match(e.request).then(cRes => {
+        if(cRes) {
+            return cRes;
+        }
+        let reqClone = e.request.clone();
+        return fetch(reqClone).then(fRes => {
+            if(!fRes) {
+                console.log('Fetch of cloned request from cache failed.');
+                return fRes;
+            }
+            let resClone = fRes.clone();
+            caches.open(staticCache).then(c => {
+                c.put(e.request, resClone);
+            });
+            return fRes;
+        })
+        .catch(error => {
+            console.log('You are in offline mode. Error message: ', error);
+            return new Response('You are in offline mode. Error message: ' + error);
+        })
+    }))
 });
