@@ -11,9 +11,9 @@ window.addEventListener('load', () => { // when page loads,
     }
 
     // but, if serviceWorker IS supported, do the following:
-    navigator.serviceWorker.register('js/sw.js', { // register it
+    navigator.serviceWorker.register('/sw.js', { // register it
         scope: '/' // set its scope to origin root
-    }).then( => { // when that's finished,
+    }).then( () => { // when that's finished,
         // do nothing, for now...
     }).catch(error => { // but if an error occurs while registering,
         // log said error to the console.
