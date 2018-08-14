@@ -1,1 +1,1 @@
-browser-sync start --index="index.html" --server --files "./**/*"
+browser-sync start --no-open --index="index.html" -sw --files "**/*"

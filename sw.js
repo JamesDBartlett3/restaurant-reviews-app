@@ -27,7 +27,7 @@ let restJS = [
     '/js/restaurant_info.js'
 ];
 
-
+/*
 
 self.addEventListener('install', e => {
     e.waitUntil(
@@ -73,3 +73,5 @@ self.addEventListener('fetch', e => {
         })
     }))
 });
+
+ */
