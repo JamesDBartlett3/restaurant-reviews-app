@@ -73,7 +73,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
+        center: [40.716000, -73.980000],
         zoomControl: true,
         zoom: 12,
         scrollWheelZoom: false
@@ -210,3 +210,26 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+
+
+
+/* ==============  Tab Index Fixer ======================================
+This function allows the user to skip over the map section when using a
+screen reader or keyboard navigation. Both are good examples of use cases
+where the user would probably like to bypass the map UI, and interact
+directly with the a11y-friendly elements on the page instead.
+======================================================================= */
+
+// Wait until all page assets are loaded.
+window.addEventListener('load', () => {
+
+    // Remove the tabindex attribute from any map-related elements that have it.
+    $('.leaflet-pane .leaflet-marker-icon, #map').removeAttr("tabindex");
+
+    // Add `tabindex = "-1"`` to any map-related clickable elements (anchor tags).
+    $('.leaflet-control-zoom > a').attr('tabindex', -1);
+    $('.leaflet-control-attribution > a').attr('tabindex', -1);
+});
+
+/* ===================================================================== */
