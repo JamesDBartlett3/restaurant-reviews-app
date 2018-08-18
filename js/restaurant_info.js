@@ -20,7 +20,7 @@ initMap = () => {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoomControl: true,
         zoom: 16,
-        scrollWheelZoom: true
+        scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
         mapboxToken: mapbox_api.key,
