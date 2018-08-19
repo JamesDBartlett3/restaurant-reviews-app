@@ -12,7 +12,7 @@ window.addEventListener('load', () => { // when page loads,
 
     // but, if serviceWorker IS supported, do the following:
     navigator.serviceWorker.register('sw.js', { // register it
-        scope: '/' // set its scope to origin root
+        scope: '/restaurant-reviews-app/' // set its scope to origin root
     }).then( () => { // when that's finished,
         // do nothing, for now...
     }).catch(error => { // but if an error occurs while registering,
