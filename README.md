@@ -9,7 +9,7 @@ Note to reviewer: If you are viewing this project on GitHub, you will find that 
 4) Launch the python localhost server with this command: `python -m SimpleHTTPServer 8000`
 5) Manually clear your browser cache, unregister the old service worker, and do a hard refresh.
 6) That's it!
-7) 
+
 <!--
 ## Project Overview
 
