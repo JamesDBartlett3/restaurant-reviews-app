@@ -1,4 +1,4 @@
-var staticCache = "rest-rev-v0.0";
+var staticCache = "rest-rev-v0.2";
 
 let restCSS = [
     '/css/styles.css'
@@ -9,9 +9,18 @@ let restDATA = [
 ]
 
 let restHTML = [
-    '/skeleton',
     '/index.html',
-    '/restaurant.html'
+    '/restaurant.html',
+	'/restaurant.html?id=1',
+	'/restaurant.html?id=2',
+	'/restaurant.html?id=3',
+	'/restaurant.html?id=4',
+	'/restaurant.html?id=5',
+	'/restaurant.html?id=6',
+	'/restaurant.html?id=7',
+	'/restaurant.html?id=8',
+	'/restaurant.html?id=9',
+	'/restaurant.html?id=10'
 ]
 
 let restIMG = [
@@ -21,13 +30,14 @@ let restIMG = [
 
 let restJS = [
     '/js/dbhelper.js',
-    '/private/mapbox_api_key.js',
+    /* '/private/mapbox_api_key.js', */
+	'/js/key.js',
     '/js/main.js',
     '/js/register-sw.js',
     '/js/restaurant_info.js'
 ];
 
-/*
+
 
 self.addEventListener('install', e => {
     e.waitUntil(
@@ -68,10 +78,9 @@ self.addEventListener('fetch', e => {
             return fRes;
         })
         .catch(error => {
-            console.log('You are in offline mode. Error message: ', error);
-            return new Response('You are in offline mode. Error message: ' + error);
+            console.error('You are in offline mode. Error message: ', error);
+            // return new Response('You are in offline mode. Error message: ' + error);
+			return fRes;
         })
     }))
 });
-
- */

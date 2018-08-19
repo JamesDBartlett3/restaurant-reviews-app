@@ -1,10 +1,19 @@
-# Mobile Web Specialist Certification Course
+# Front End Web Development Nanodegree -- Project 5
 ---
 #### Restaurant Reviews App
 
-## Project Overview: Stage 1
+Note to reviewer: If you are viewing this project on GitHub, you will find that the Mapbox API key is stored in an obfuscated JavaScript file under the `js` folder, called `key.js.` Due to the code obfuscator's self-defense mechanisms, you will probably have a pretty hard time doing any code inspection, so if you need to do a deep dive into my JavaScript, I suggest you do the following:
+1) Clone the repo to your local machine.
+2) Delete the file `js/key.js`.
+3) Open the file `key_replace.js`, paste your own Mapbox API key into the `mapbox_api` object (between the single quotes), then save the file, and rename it to `key.js`.
+4) Launch the python localhost server with this command: `python -m SimpleHTTPServer 8000`
+5) Manually clear your browser cache, unregister the old service worker, and do a hard refresh.
+6) That's it!
+7) 
+<!--
+## Project Overview
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+For the **Restaurant Reviews** project, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
 
 ### Specification
 
@@ -27,3 +36,4 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 ### Note about ES6
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+ -->
