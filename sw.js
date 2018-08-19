@@ -79,8 +79,8 @@ self.addEventListener('fetch', e => {
         })
         .catch(error => {
             console.error('You are in offline mode. Error message: ', error);
-            return new Response('You are in offline mode. Error message: ' + error);
-			//return fRes;
+            //return new Response('You are in offline mode. Error message: ' + error);
+			return fRes;
         })
     }))
 });
