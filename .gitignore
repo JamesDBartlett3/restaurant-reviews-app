@@ -4,4 +4,3 @@ node_modules/
 mapbox_api_key.js
 private/
 docs/**/*
-key.js
