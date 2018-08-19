@@ -1,9 +1,5 @@
 var staticCache = "rest-rev-v0.3";
 
-const restROOT = [
-	'restaurant-reviews-app/'
-]
-
 let restCSS = [
     'css/styles.css'
 ]
