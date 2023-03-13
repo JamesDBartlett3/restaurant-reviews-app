@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesDBartlett/restaurant-reviews-app.git"
+    "url": "git+https://github.com/JamesDBartlett3/restaurant-reviews-app.git"
   },
   "author": "James D. Bartlett III",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JamesDBartlett/restaurant-reviews-app/issues"
+    "url": "https://github.com/JamesDBartlett3/restaurant-reviews-app/issues"
   },
-  "homepage": "https://github.com/JamesDBartlett/restaurant-reviews-app#readme"
+  "homepage": "https://github.com/JamesDBartlett3/restaurant-reviews-app#readme"
 }
